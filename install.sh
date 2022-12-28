@@ -1,31 +1,28 @@
 #!/bin/bash
 
-if [ $EUID != 0 ]; then
-    echo "Usage: sudo $0 $@"
-    exit $?
-fi
+SCRIPT_PATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-if [ $EUID = 0 ]; then
-    echo "Setting up for: $SUDO_USER"
-    
-    # Populating git user inside git_config
-    echo "Setting up git user file!"
-    read -p "Enter your username [ (b) bypass this step ]: " git_user
+# Populating git user inside git_config
+echo "Setting up git user file!"
+read -p "Enter your username [ (b) bypass this step ]: " git_user
 
-    if [ $git_user != "b" ]; then
-        read -p "Enter your git email: " git_email
 
+# Scripts and rcs
+ln -s $SCRIPT_PATH/git_config /home/$USER/.gitconfig
+ln -s $SCRIPT_PATH/vim_config /home/$USER/.vimrc
+ln -s $SCRIPT_PATH/init_script.zsh /home/$USER/.oh-my-zsh/custom/init_script.zsh
+
+# Konsole settings
+ln -s $SCRIPT_PATH/konsole/* /home/$USER/.local/share/konsole/
+
+if [ $git_user != "b" ]; then
+    read -p "Enter your git email: " git_email
+
+    if [ ! -z "$git_email" ]; then
         # Append new settings to git_config file
         echo "[user]
             name = $git_user
-            email = $git_email" >> ./git_config 
+            email = $git_email" >> /home/$USER/.gitconfig
     fi
-
-    # Scripts and rcs
-    ln -s ./git_config /home/$SUDO_USER/.gitconfig
-    ln -s ./vim_config /home/$SUDO_USER/.vimrc
-    ln -s ./init_script.zsh /home/$SUDO_USER/.oh-my-zsh/custom/init_script.zsh
-    
-    # Konsole settings
-    ln -s ./konsole/* /home/$SUDO_USER/.local/konsole/
 fi
+
