@@ -1,0 +1,6 @@
+[alias]
+    br = branch
+    st = status
+    co = checkout
+    ci = commit
+    lg = log --pretty=oneline --graph --decorate
