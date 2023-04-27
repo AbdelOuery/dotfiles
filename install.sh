@@ -6,14 +6,10 @@ SCRIPT_PATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 echo "Setting up git user file!"
 read -p "Enter your username [ (b) bypass this step ]: " git_user
 
-
 # Scripts and rcs
 ln -s $SCRIPT_PATH/git_config /home/$USER/.gitconfig
 ln -s $SCRIPT_PATH/vim_config /home/$USER/.vimrc
 ln -s $SCRIPT_PATH/init_script.zsh /home/$USER/.oh-my-zsh/custom/init_script.zsh
-
-# Konsole settings
-ln -s $SCRIPT_PATH/konsole/* /home/$USER/.local/share/konsole/
 
 if [ $git_user != "b" ]; then
     read -p "Enter your git email: " git_email

@@ -4,3 +4,6 @@
     co = checkout
     ci = commit
     lg = log --pretty=oneline --graph --decorate
+[user]
+            name = AbdelOuery
+            email = oueryemchiabdelbasset@gmail.com
