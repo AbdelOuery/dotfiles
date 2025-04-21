@@ -10,6 +10,9 @@ read -p "Enter your username [ (b) bypass this step ]: " git_user
 ln -s $SCRIPT_PATH/git_config $HOME/.gitconfig
 ln -s $SCRIPT_PATH/vim_config $HOME/.vimrc
 
+ln -s $SCRIPT_PATH/macbook/enable-clamshell.sh $HOME/.enable-clamshell
+ln -s $SCRIPT_PATH/macbook/disable-clamshell.sh $HOME/.disable-clamshell
+
 if [ $git_user != "b" ]; then
     read -p "Enter your git email: " git_email
 
