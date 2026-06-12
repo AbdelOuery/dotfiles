@@ -8,3 +8,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set autoindent
+
+let g:airline_powerline_fonts = 1
+let g:airline_theme='deus'
