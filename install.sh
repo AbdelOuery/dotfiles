@@ -8,7 +8,6 @@ git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/pack/dist/sta
 
 echo "Setting up configuration files..."
 mkdir -p $HOME/.config/ghostty
-mkdir -p $HOME/.config/niri/config.kdl
 
 # Scripts and rcs
 ln -s $SCRIPT_PATH/git_config $HOME/.gitconfig
