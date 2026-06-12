@@ -1,0 +1,38 @@
+# Font
+font-family = Fira Code
+font-size = 12
+font-style-bold = medium
+bold-is-bright = true
+
+# Spacing
+adjust-underline-position = 1
+adjust-cell-height = 10%
+
+# Color, Transparency & blur (macOS)
+theme = Nvim Dark
+cursor-color = 999999
+background-opacity = 0.95
+
+# Window
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+window-width = 125
+window-height = 35
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Scrollback
+scrollback-limit = 10000
+
+# Shell integration
+shell-integration = fish
+shell-integration-features = cursor,no-cursor,sudo,title
+
+# Misc
+copy-on-select = true
+mouse-hide-while-typing = true
+focus-follows-mouse = false
+window-inherit-working-directory = false
