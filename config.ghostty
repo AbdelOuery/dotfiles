@@ -1,38 +1,42 @@
 # Font
-font-family = Fira Code
-font-size = 12
-font-style-bold = medium
+font-family = CommitMono Nerd Font
+font-size = 16
+font-style-bold = none
 bold-is-bright = true
-
+ 
 # Spacing
-adjust-underline-position = 1
-adjust-cell-height = 10%
-
-# Color, Transparency & blur (macOS)
+adjust-underline-position = 2
+adjust-cell-height = 4
+adjust-cell-width = 0
+ 
+# Color, Transparency & blur
 theme = Nvim Dark
-cursor-color = 999999
-background-opacity = 0.95
-
+cursor-color = AB9D9D
+background-opacity = 0.93
+background-blur-radius = 10
+ 
 # Window
-window-padding-x = 10
+window-padding-x = 12
 window-padding-y = 10
 window-padding-balance = true
-window-width = 125
-window-height = 35
-
+window-width = 108
+window-height = 32
+ 
 # Cursor
 cursor-style = block
 cursor-style-blink = false
-
+ 
 # Scrollback
 scrollback-limit = 10000
-
+ 
 # Shell integration
-shell-integration = fish
+shell-integration = zsh
 shell-integration-features = cursor,no-cursor,sudo,title
-
+ 
 # Misc
 copy-on-select = true
 mouse-hide-while-typing = true
 focus-follows-mouse = false
 window-inherit-working-directory = false
+ 
+keybind = ctrl+enter=ignore
